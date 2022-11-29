@@ -582,7 +582,113 @@ y = {"google", "microsoft", "apple"}
 z = x.intersection(y)
 
 print(z)
-                  
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q55. What is dictionary ibn Python?
+Ans:-Dictionaries are used to store data values in key:value pairs.
+
+A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+------------------------------------------------------------------------------------------------------------------------------
+
+Q56. How is dictionary different from all other data structures.
+ANS:-Dictionary items are presented in key:value pairs, and can be referred to by using the key name
+-------------------------------------------------------------------------------------------------------------------------------
+Q57. How can we delare a dictionary in Python?
+Ans:-Dictionaries are written with curly brackets, and have keys and values:
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+----------------------------------------------------------------------------------------------------------------------------------
+Q58. What will the output of the following?
+
+var = {}
+print(type(var))
+ANS:-<Type 'dict'>
+----------------------------------------------------------------------------------------------------------------------------------
+Q59. How can we add an element in a dictionary?
+Ans:-Adding an item to the dictionary is done by using a new index key and assigning a value to it:
+---------------------------------------------------------------------------------------------------------------------------------
+Q60. Create a dictionary and access all the values in that dictionary.
+Ans:-thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+x = thisdict.values()
+
+print(x)
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q61. Create a nested dictionary and access all the element in the inner dictionary.
+Ans:-
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+
+print(myfamily)
+=====================================================================================================================================================
+Q62. What is the use of get() function?
+Ans:-Returns the value of the specified key
+----------------------------------------------------------------------------------------------------------------------------------------------
+Q63. What is the use of items() function?
+Ans:-Returns a list containing a tuple for each key value pair
+----------------------------------------------------------------------------------------------------------------------------------------------
+Q64. What is the use of pop() function?
+Ans:-Removes the element with the specified key
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Q65. What is the use of popitems() function?
+Ans:-Removes the last inserted key-value pair
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Q66. What is the use of keys() function?
+Ans:-Returns a list containing the dictionary's keys
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Q67. What is the use of values() function?
+Ans:-Returns a list of all the values in the dictionary
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q68. What are loops in Python?
+Ans:-A loop statement allows us to execute a statement or group of statements multiple times
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q69. How many type of loop are there in Python?
+Ans:-Python has two primitive loop commands:
+
+while loops
+for loops
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q70. What is the difference between for and while loops?
+Ans:-for loop
+Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
+while loop
+Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q71. What is the use of continue statement?
+Ans:-With the continue statement we can stop the current iteration, and continue with the next:
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q72. What is the use of break statement?
+Ans:-With the break statement we can stop the loop even if the while condition is true:
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Q73. What is the use of pass statement?
+Ans:-pass is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, 
+but no code needs to be executed
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q74. What is the use of range() function?
+Ans:-The range() is an in-built function in Python. It returns a sequence of numbers starting from zero and increment by 1 by default and stops before the given number.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q75. How can you loop over a dictionary?     
+Ans:-You can loop through a dictionary by using a for loop.
+
+When looping through a dictionary, the return value are the keys of the dictionary, but there are methods to return the values as well.
                   
                   
                   
