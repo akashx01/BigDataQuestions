@@ -1,0 +1,114 @@
+Q1. What is the purpose of Python's OOP?
+Ans:-Object Oriented Programming is a way of computer programming using the idea of “objects” to represents data and methods. It is also, an approach used for
+creating neat and reusable code instead of a redundant one. the program is divided into self-contained objects or several mini-programs.
+Every Individual object represents a different part of the application having its own logic and data to communicate within themselves.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2. Where does an inheritance search look for an attribute?
+Ans:-
+Q3. How do you distinguish between a class object and an instance object?
+Ans:-when we create a class in python then a class object is created so whenever python finds a class statement in the whole program then it creates a class object
+and assigns a name to that object i.e. class name.
+when we call a class, it creates an instance object of that class from which the object has been created.
+Obj1=MyClass()
+the above statement creates an object and names it to Obj1 which is an instance of MyClass.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Q4. What makes the first argument in a class’s method function special?
+Ans:-The self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. It binds the 
+attributes with the given arguments. The reason why we use self is that Python does not use the ‘@’ syntax to refer to instance attributes.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q5. What is the purpose of the init method?
+Ans:- __init__ is a special python method that runs whenever a new object is created. These types of functions are used to initialize the attributes of that class,
+E.g., if the class is Person, then the attributes will be name, age, etc.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q6. What is the process for creating a class instance?
+Ans:-To create instances of a class, you call the class using class name and pass in whatever arguments its __init__ method accepts.
+"This would create first object of Employee class"
+emp1 = Employee("Zara", 2000)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q7. What is the process for creating a class?
+Ans:-To create a class, use the keyword class:
+
+Example
+Create a class named MyClass, with a property named x:
+
+class MyClass:
+  x = 5
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q8. How would you define the superclasses of a class?
+Ans:-In object-oriented programming, a class from which other classes inherit code is called a superclass.
+The syntax for a subclass definition looks like this:
+
+class DerivedClassName(BaseClassName):
+    pass
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q9. What is the relationship between classes and modules?
+Ans:- a module in python is simply a way to organize the code, and it contains either python classes or just functions. If you need those classes or functions
+in your project, you just import them. For instance, the math module in python contains just a bunch of functions, and you just call those needed (math.sin). 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q10. How do you make instances and classes?
+Ans:-When you create an object, you are creating an instance of a class, therefore "instantiating" a class.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q11. Where and how should be class attributes created?
+Ans:-Class attributes belong to the class itself they will be shared by all the instances. Such attributes are defined in the class body parts usually at the top,
+for legibility.To define a class attribute, you place it outside of the __init__() method.
+following defines pi as a class attribute:
+class Circle:
+    pi = 3.14159
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q12. Where and how are instance attributes created?
+Ans:-An instance attribute is a Python variable belonging to only one object. It is only accessible in the scope of the object and
+it is defined inside the constructor function of a class. 
+For example, __init__(self,..).
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q13. What does the term "self" in a Python class mean?
+Ans:-The self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
+It binds the attributes with the given arguments.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q14. How does a Python class handle operator overloading?
+Ans:-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q15. When do you consider allowing operator overloading of your classes?
+Ans:-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q16. What is the most popular form of operator overloading?
+Ans:-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q17. What are the two most important concepts to grasp in order to comprehend Python OOP code?
+Ans:-class and object are two most imortant concept to grasp in order to comprehend python oop code
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q18. Describe three applications for exception processing.
+Ans:-
+Q19. What happens if you don't do something extra to treat an exception?
+
+Q20. What are your options for recovering from an exception in your script?
+
+Q21. Describe two methods for triggering exceptions in your script.
+
+Q22. Identify two methods for specifying actions to be executed at termination time, regardless of
+whether or not an exception exists.
+
+Q23. What is the purpose of the try statement?
+
+Q24. What are the two most popular try statement variations?
+
+Q25. What is the purpose of the raise statement?
+
+Q26. What does the assert statement do, and what other statement is it like?
+
+Q27. What is the purpose of the with/as argument, and what other statement is it like?
+
+Q28. What are *args, **kwargs?
+
+Q29. How can I pass optional or keyword parameters from one function to another?
+
+Q30. What are Lambda Functions?
+
+Q31. Explain Inheritance in Python with an example?
+
+Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of class C, which version gets invoked?
+
+Q33. Which methods/functions do we use to determine the type of instance and inheritance?
+
+Q34.Explain the use of the 'nonlocal' keyword in Python.
+
+Q35. What is the global keyword?
