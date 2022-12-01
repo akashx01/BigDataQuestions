@@ -65,40 +65,101 @@ Ans:-The self is used to represent the instance of the class. With this keyword,
 It binds the attributes with the given arguments.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q14. How does a Python class handle operator overloading?
-Ans:-
+Ans:-To overload an operator  you need to provide an implementation to a particular special method in your class.Whenever you use +, a special method called __add__ is invoked.
+
+Thus, if you want to use + on two bills, implement the __add__ method in the Bill class and define the intended behavior:
+class Bill:
+    def __init__(self, value):
+        self.value = value
+    
+    def __add__(self, otherBill):
+        return self.value + otherBill.value
+        
+five_dollars = Bill(5)
+ten_dollars = Bill(10)
+
+total = five_dollars + ten_dollars
+print(total)
+Output:
+
+15
+Now you can add up two instances of Bill. The + operator invokes the __add__ method, which knows how to add up two instances of Bill.
+
+So, calling
+
+five_dollars + ten_dollars
+is equivalent to
+
+five_dollars.__add__(ten_dollars)
+Now it is possible to add up bills. But maybe you want to be able to subtract bills in a similar fashion. To do this, implement the special method called __sub__ in the Bill class:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q15. When do you consider allowing operator overloading of your classes?
-Ans:-
+Ans:-Operator Overloading means giving extended meaning beyond their predefined operational meaning. For example operator + is used to add two integers as 
+well as join two strings and merge two lists. It is achievable because ‘+’ operator is overloaded by int class and str class. 
+You might have noticed that the same built-in operator or function shows different behavior for objects of different classes, this is called Operator Overloading.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q16. What is the most popular form of operator overloading?
-Ans:-
+Ans:-Oerator overloading is the process of using an operator in different ways depending on the operands. You can change the way an operator in Python works on different data-types.
+
+A very popular and convenient example is the Addition (+) operator.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q17. What are the two most important concepts to grasp in order to comprehend Python OOP code?
 Ans:-class and object are two most imortant concept to grasp in order to comprehend python oop code
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q18. Describe three applications for exception processing.
-Ans:-
+Ans:-Try and Except Statement - Catching Exceptions
+In Python, we catch exceptions and handle them using try and except code blocks. The try clause contains the code that can raise an exception, 
+while the except clause contains the code lines that handle the exception
+
+Try with Else Clause
+Python also supports the else clause, which should come after every except clause, in the try, and except blocks.
+Only when the try clause fails to throw an exception the Python interpreter goes on to the else block.
+
+Finally Keyword in Python
+The finally keyword is available in Python, and it is always used after the try-except block. The finally code block is always executed after 
+the try block has terminated normally or after the try block has terminated for some other reason.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q19. What happens if you don't do something extra to treat an exception?
-
+Ans:-The programm will get an error and furthrt not proceed until thr error is resolved.
 Q20. What are your options for recovering from an exception in your script?
-
+Ans:-
 Q21. Describe two methods for triggering exceptions in your script.
+Ans:-In Python, exceptions can be handled by two new methods:
 
+Try: Catches exceptions raised by Python or a program
+Raise: A custom exception that triggers an exception manually
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q22. Identify two methods for specifying actions to be executed at termination time, regardless of
 whether or not an exception exists.
 
 Q23. What is the purpose of the try statement?
-
+Ans:-Catches exceptions raised by Python or a program
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q24. What are the two most popular try statement variations?
-
+Ans:-Try-except-else Clause
+Try-finally Clause
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q25. What is the purpose of the raise statement?
-
+Ans:-To trigger exceptions, we need to code raise statements. Their general form is simple: the keyword, ‘raise’, followed by the name of the exception to be raised.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q26. What does the assert statement do, and what other statement is it like?
+Ans:-Assertions are statements that assert or state a fact confidently in your program. For example, while writing a division function,
+you're confident the divisor shouldn't be zero, you assert divisor is not equal to zero.
 
+Assertions are simply boolean expressions that check if the conditions return true or not. If it is true, the program does nothing and moves to the next line of code.
+However, if it's false, the program stops and throws an error
+
+It is also a debugging tool as it halts the program as soon as an error occurs and displays it.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q27. What is the purpose of the with/as argument, and what other statement is it like?
-
+Ans:- In Python, with statement is used in exception handling to make the code cleaner and much more readable. It simplifies the management of common 
+resources like file streams.
 Q28. What are *args, **kwargs?
+Ans:-Arbitrary Arguments, *args
+If you do not know how many arguments that will be passed into your function, add a * before the parameter name in the function definition.
+The term Kwargs generally represents keyword arguments, suggesting that this format uses keyword-based Python dictionaries
 
+This way the function will receive a tuple of arguments, and can access the items accordingly:
 Q29. How can I pass optional or keyword parameters from one function to another?
 
 Q30. What are Lambda Functions?
