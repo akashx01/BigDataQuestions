@@ -154,20 +154,74 @@ It is also a debugging tool as it halts the program as soon as an error occurs a
 Q27. What is the purpose of the with/as argument, and what other statement is it like?
 Ans:- In Python, with statement is used in exception handling to make the code cleaner and much more readable. It simplifies the management of common 
 resources like file streams.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q28. What are *args, **kwargs?
 Ans:-Arbitrary Arguments, *args
 If you do not know how many arguments that will be passed into your function, add a * before the parameter name in the function definition.
 The term Kwargs generally represents keyword arguments, suggesting that this format uses keyword-based Python dictionaries
-
 This way the function will receive a tuple of arguments, and can access the items accordingly:
+
+Arbitrary Keyword Arguments, **kwargs
+If you do not know how many keyword arguments that will be passed into your function, add two asterisk: ** before the parameter name in the function definition.
+This way the function will receive a dictionary of arguments, and can access the items accordingly:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q29. How can I pass optional or keyword parameters from one function to another?
+Ans:-To pass, collect the arguments using the * and ** in the function’s parameter list. Through this, you will get the positional arguments as a tuple and the keyword
+arguments as a dictionary. Pass these arguments when calling another function by using * and ** −
+def f(a, *args, **kwargs):
+   ...
+   kwargs['width'] = '14.3c'
+   ...
+   g(a, *args, **kwargs)
+   -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q30. What are Lambda Functions?
+Ans:-A lambda function is a small anonymous function.
 
+A lambda function can take any number of arguments, but can only have one expression.
+
+Syntax
+lambda arguments : expression
+The expression is executed and the result is returned:
+
+Example
+Add 10 to argument a, and return the result:
+
+x = lambda a : a + 10
+print(x(5))
+OUTPUT:-15
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q31. Explain Inheritance in Python with an example?
+Ans:-Python Inheritance
+Inheritance allows us to define a class that inherits all the methods and properties from another class.
+
+Parent class is the class being inherited from, also called base class.
+
+Child class is the class that inherits from another class, also called derived class.
+
+Create a Parent Class
+Any class can be a parent class, so the syntax is the same as creating any other class:
+
+Example
+Create a class named Person, with firstname and lastname properties, and a printname method:
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+#Use the Person class to create an object, and then execute the printname method:
+
+x = Person("Akash", "Mishra")
+x.printname()
+OUTPUT:- Akash Mishra
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of class C, which version gets invoked?
-
+Ans:-
 Q33. Which methods/functions do we use to determine the type of instance and inheritance?
 
 Q34.Explain the use of the 'nonlocal' keyword in Python.
