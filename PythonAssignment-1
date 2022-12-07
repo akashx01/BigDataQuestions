@@ -689,7 +689,255 @@ Q75. How can you loop over a dictionary?
 Ans:-You can loop through a dictionary by using a for loop.
 
 When looping through a dictionary, the return value are the keys of the dictionary, but there are methods to return the values as well.
-                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Coding problems
+Q76. Write a Python program to find the factorial of a given number.
+Ans:-
+num = int(input("Enter a number: "))    
+factorial = 1    
+if num < 0:    
+   print(" Factorial does not exist for negative numbers")    
+elif num == 0:    
+   print("The factorial of 0 is 1")    
+else:    
+   for i in range(1,num + 1):    
+       factorial = factorial*i    
+   print("The factorial of",num,"is",factorial)    
+   -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (PRT)/100
+Ans:-
+def simple_interest(p,r,t):
+    print('The principal is', p)
+    print('The time period is', r)
+    print('The rate of interest is',t)
+     
+    si = (p * r * t)/100
+     
+    print('The Simple Interest is', si)
+    return si
+     
+simple_interest(8, 8, 6)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.
+Ans:-
+
+ 
+def compound_interest(principal, rate, time):
+ 
+    # Calculates compound interest
+    Amount = principal * (pow((1 + rate / 100), time))
+    CI = Amount - principal
+    print("Compound interest is", CI)
+ 
+compound_interest(10000, 10.25, 5)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q79. Write a Python program to check if a number is prime or not.
+Ans:-
+if num > 1:
+for i in range(2, num//2):
+if (num % i) == 0:
+print(num, "is not a prime number")
+break
+else:
+print(num, "is a prime number")
+else:
+print(num, "is not a prime number")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q80. Write a Python program to check Armstrong Number.
+Ans:-
+# Python program to check if the number provided by the user is an Armstrong number or not
+# take input from the user
+num = int(input("Enter a number: "))
+# initialize sum
+sum = 0
+# find the sum of the cube of each digit
+temp = num
+while temp > 0:
+digit = temp % 10
+sum += digit ** 3
+temp //= 10
+# display the result
+if num == sum:
+print(num,"is an Armstrong number")
+else:
+print(num,"is not an Armstrong number")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q81. Write a Python program to find the n-th Fibonacci Number.
+Ans:-
+# defining the function for Fibonacci Series  
+def Fibonacci_Series(n):   
+    # using if-else conditional statement  
+    if n < 0:  
+        print("Oops! Incorrect input")  
+    # First Fibonacci number is 0  
+    elif n == 0:   
+        return (0)   
+    # Second Fibonacci number is 1   
+    elif n == 1:  
+        return (1)  
+    else:  
+        return (Fibonacci_Series(n - 1) + Fibonacci_Series(n - 2))   
+# printing the 12th element of the Fibonacci Series  
+print("12th Element of the Fibonacci Series:", Fibonacci_Series(12))
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q82. Write a Python program to interchange the first and last element in a list.
+Ans:-
+# Python program to interchange the 
+# first and last element of a list
+
+# Creating a list 
+myList = [1, 7, 3, 90, 23, 4]
+print("Initial List : ", myList)
+
+# finding the length of list
+length = len(myList)
+
+# Swapping first and last element
+temp = myList[0]
+myList[0] = myList[length - 1]
+myList[length - 1] = temp
+
+print("List after Swapping : ", myList)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q83. Write a Python program to swap two elements in a list.
+Ans:-
+# Swap function
+def swapPositions(list, pos1, pos2):
+     
+    list[pos1], list[pos2] = list[pos2], list[pos1]
+    return list
+ 
+# Driver function
+List = [23, 65, 19, 90]
+pos1, pos2  = 1, 3
+ 
+print(swapPositions(List, pos1-1, pos2-1)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q84. Write a Python program to find N largest element from a list.
+Ans:-
+# Function returns N largest elements
+def Nmaxelements(list1, N):
+    final_list = []
+ 
+    for i in range(0, N):
+        max1 = 0
+         
+        for j in range(len(list1)):    
+            if list1[j] > max1:
+                max1 = list1[j];
+                 
+        list1.remove(max1);
+        final_list.append(max1)
+         
+    print(final_list)
+ 
+# Driver code
+list1 = [2, 6, 41, 85, 0, 3, 7, 6, 10]
+N = 2
+ 
+# Calling the function
+Nmaxelements(list1, N)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q85. Write a Python program to find cumulative sum of a list.
+Ans:-
+def Cumulative(lists):
+    cu_list = []
+    length = len(lists)
+    cu_list = [sum(lists[0:x:1]) for x in range(0, length+1)]
+    return cu_list[1:]
+ 
+# Driver Code
+lists = [10, 20, 30, 40, 50]
+print (Cumulative(lists)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q86. Write a Python program to check if a string is palindrome or not.
+Ans:-
+# Program to check if a string is palindrome or not
+my_str = 'aIbohPhoBiA'
+
+# make it suitable for caseless comparison
+my_str = my_str.casefold()
+
+# reverse the string
+rev_str = reversed(my_str)
+
+# check if the string is equal to its reverse
+if list(my_str) == list(rev_str):
+   print("The string is a palindrome.")
+else:
+   print("The string is not a palindrome.")
+   --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q87. Write a Python program to remove i'th element from a string.
+Ans:_
+# Python code to demonstrate method 
+# to remove i-th character
+
+myStr =  input('Enter the string : ')
+i = int(input('Enter the index of character to be removed : '))
+
+resStr = ""
+
+for index in range(len(myStr)):
+	if index != i:
+		resStr = resStr + myStr[index]
+
+# Printing all strings... 
+print ("Entered string : " + myStr)
+print ("String formed by removing i'th character : " + resStr)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q88. Write a Python program to check if a substring is present in a given string.
+Ans:-
+def check(str1, sstr): 
+   if (str1.find(sstr) == -1): 
+      print(sstr,"IS NOT PRESENT IN THE GIVEN STRING") 
+   else: 
+      print(sstr,"IS PRESENT IN THE GIVEN STRING") 
+# Driver code 
+str1 = input("Enter the string ::>")
+sstr=input("Enter Substring ::>")
+check(str1, sstr) 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q89. Write a Python program to find words which are greater than given length k.
+Ans:-
+# Python program to find words which are greater 
+# than given length k
+
+# Getting input from user 
+myStr =  input('Enter the string : ')
+k = int(input('Enter k  (value for accepting string) : '))
+largerStrings = []
+
+# Finding words with length greater than k
+words = myStr.split(" ")
+for word in words:
+	if len(word) > k:
+		largerStrings.append(word)
+		
+# printing values
+print("All words which are greater than given length ", k, "are ", largerStrings)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q90. Write a Python program to extract unquire dictionary values.
+Ans:-
+my_dict = {'hi' : [5,3,8, 0],
+   'there' : [22, 51, 63, 77],
+   'how' : [7, 0, 22],
+   'are' : [12, 11, 45],
+   'you' : [56, 31, 89, 90]}
+
+print("The dictionary is : ")
+print(my_dict)
+
+my_result = list(sorted({elem for val in my_dict.values() for elem in val}))
+
+print("The unique values are : ")
+print(my_result)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q91. Write a Python program to merge two dictionary.
+Ans:-
+Q92. Write a Python program to convert a list of tuples into dictionary.
+
+Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
                   
                   
                   
