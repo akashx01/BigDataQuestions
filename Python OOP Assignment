@@ -4,7 +4,9 @@ creating neat and reusable code instead of a redundant one. the program is divid
 Every Individual object represents a different part of the application having its own logic and data to communicate within themselves.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q2. Where does an inheritance search look for an attribute?
-Ans:-
+Ans:-An inheritance search looks for an attribute first in the instance object,then in the class the instance was createdfrom,then in all higher superclsasses
+progressing from left to right(by default).The search stops at the first place the attribute is found.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q3. How do you distinguish between a class object and an instance object?
 Ans:-when we create a class in python then a class object is created so whenever python finds a class statement in the whole program then it creates a class object
 and assigns a name to that object i.e. class name.
@@ -221,9 +223,18 @@ OUTPUT:- Akash Mishra
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of class C, which version gets invoked?
-Ans:-
+Ans:-Python will always call the first thing that is found in the method resolution order. Since you specified the inheritance as A, B then A will be found first, so its method will be called.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q33. Which methods/functions do we use to determine the type of instance and inheritance?
-
+Ans:-The isinstance() method checks whether an object is an instance of a class whereas issubclass() method asks whether one class is a subclass of another class
+(or other classes).
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q34.Explain the use of the 'nonlocal' keyword in Python.
-
+Ans:- The nonlocal instruction is used when nested functions are implemented in the program. The nonlocal instruction is intended to change the value of an 
+enclosing function variable in the body of a nested function. Thus, the nested function has access to the variables of the enclosing functions.
+Using this mechanism makes it possible to maintain modifiable information about the state, which is restored on subsequent calls to the nested function.s.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q35. What is the global keyword?
+Ans:-A global keyword is a keyword that allows a user to modify a variable outside the current scope. It is used to create global variables in Python from 
+a non-global scope, i.e. inside a function. Global keyword is used inside a function only when we want to do assignments or when we want to change a variable.
+Global is not needed for printing and accessing.
