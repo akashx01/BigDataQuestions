@@ -934,13 +934,183 @@ print(my_result)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q91. Write a Python program to merge two dictionary.
 Ans:-
+d1 = {'a': 100, 'b': 200}
+d2 = {'x': 300, 'y': 200}
+d = d1.copy()
+d.update(d2)
+print(d)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q92. Write a Python program to convert a list of tuples into dictionary.
 
 Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
-                  
-                  
-                  
+	#create a list
+	l = [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+	d = {}
+	for a, b in l:
+	    d.setdefault(a, []).append(b)
+	print (d)                  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------                  
+Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
+
+Input: list = [9, 5, 6]
+Output: [(9, 729), (5, 125), (6, 216)]
+Ans:-
+
+# creating a list
+list1 = [9, 5, 6]
+
+# using list comprehension to iterate each
+# values in list and create a tuple as specified
+res = [(val, val**3) for val in list1]
+
+# print the result
+print(res)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q94. Write a Python program to get all combinations of 2 tuples.
+Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
+Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
+Ans:-
+# Program to Find All Pairs Combination of Two Tuples
+
+# Creating Tuples and printing values
+test_tuple1 = (7, 2)
+test_tuple2 = (7, 8)
+print("First tuple : " + str(test_tuple1))
+print("Second tuple : " + str(test_tuple2))
+
+# finding all pair Combination of tuples 
+pairCombi = [] 
+for val1 in test_tuple1:
+    for val2 in test_tuple2:
+        tup = [val1, val2]
+        pairCombi.append(tuple(tup))
+
+for val1 in test_tuple2:
+    for val2 in test_tuple1:
+        tup = [val1, val2]
+        pairCombi.append(tuple(tup))
+
+# Printing tuple Combination 
+print("All pair Combinations are  : " + str(pairCombi))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q95. Write a Python program to sort a list of tuples by second item.
+
+Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
+Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
+
+Ans:-
+# Python program to sort a list of
+# tuples by the second Item using sort()
+
+# Function to sort the list by second item of tuple
+def Sort_Tuple(tup):
+
+	# reverse = None (Sorts in Ascending order)
+	# key is set to sort using second element of
+	# sublist lambda has been used
+	tup.sort(key = lambda x: x[1])
+	return tup
+
+# Driver Code
+tup = [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
+
+# printing the sorted list of tuples
+print(Sort_Tuple(tup))
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q96. Write a python program to print below pattern.
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+Ans:-
+# This is the example of print simple pyramid pattern  
+n = int(input("Enter the number of rows"))  
+# outer loop to handle number of rows  
+for i in range(0, n):  
+    # inner loop to handle number of columns  
+    # values is changing according to outer loop  
+        for j in range(0, i + 1):  
+            # printing stars  
+            print("* ", end="")       
+  
+        # ending line after each row  
+        print()  
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q97. Write a python program to print below pattern.
+
+    *
+   **
+  ***
+ ****
+*****
+# right triangle star pattern
+size = 5
+for i in range(size):
+    for j in range(1, size - i):
+        print(" ", end="")
+    for k in range(0, i + 1):
+        print("*", end="")
+    print()
+ -----   -----------------------------------------------------------------------------------------------------------------------------------------
+Q98. Write a python program to print below pattern.
+
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+Ans:-
+# This is the example of print simple reversed right angle pyramid pattern  
+rows = int(input("Enter the number of rows:"))  
+k = 2 * rows - 2  # It is used for number of spaces  
+for i in range(0, rows):  
+    for j in range(0, k):  
+        print(end=" ")  
+    k = k - 2   # decrement k value after each iteration  
+    for j in range(0, i + 1):  
+        print("* ", end="")  # printing star  
+    print("")  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q99. Write a python program to print below pattern.
+
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+Ans:-
+rows = int(input("Enter the number of rows: "))  
+  
+# This will print the rows  
+for i in range(1, rows+1):  
+    # This will print number of column  
+    for j in range(1, i + 1):  
+        print(j, end=' ')  
+    print("")  
+    --------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q100. Write a python program to print below pattern.
+
+A 
+B B 
+C C C 
+D D D D 
+E E E E E 
+Ans:-
+rows = int(input("Enter number of rows: "))
+
+ascii_value = 65
+
+for i in range(rows):
+    for j in range(i+1):
+        alphabet = chr(ascii_value)
+        print(alphabet, end=" ")
+    
+    ascii_value += 1
+    print("\n")
                   
                   
                   
