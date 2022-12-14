@@ -1,0 +1,100 @@
+Q1. How do you load a CSV file into a Pandas DataFrame?
+Ans:-df = pd.read_csv("data.csv")
+print(df)
+--------------------------------------------------------------------------------------------------------------------------------
+Q2. How do you check the data type of a column in a Pandas DataFrame?
+Ans:-Pandas DataFrame dtypes is an inbuilt property that returns the data types of the column of DataFrame.
+DataFrame.dtypes
+--------------------------------------------------------------------------------------------------------------------------------
+Q3. How do you select rows from a Pandas DataFrame based on a condition?
+Ans:-You can use square brackets to access rows from Pandas DataFrame.
+df[2:4]**Select rows starting from 2nd row position upto 4th row position of all columns.
+--------------------------------------------------------------------------------------------------------------------------------
+Q4. How do you rename columns in a Pandas DataFrame?
+Ans:- pandas.DataFrame.rename(columns={'old_column_name':'new_column_name'})
+--------------------------------------------------------------------------------------------------------------------------------  
+Q5. How do you drop columns in a Pandas DataFrame?
+Ans: pandas.DataFrame.drop()  
+--------------------------------------------------------------------------------------------------------------------------------  
+Q6. How do you find the unique values in a column of a Pandas DataFrame?
+Ans:-Series.unique() //Return unique values of Series object.  
+---------------------------------------------------------------------------------------------------------------------------------  
+Q7. How do you find the number of missing values in each column of a Pandas DataFrame?
+Ans:-We can use Pandas sum() function to get the counts of missing values per each column in the dataframe.
+    df.isnull.sum()
+---------------------------------------------------------------------------------------------------------------------------------   
+Q8. How do you fill missing values in a Pandas DataFrame with a specific value?
+And:- The pandas dataframe fillna() function is used to fill missing values in a dataframe.
+-----------------------------------------------------------------------------------------------------------------------------------  
+Q9. How do you concatenate two Pandas DataFrames?
+# Using pandas.concat() to concat two DataFrame
+data = [df, df1]
+df2 = pd.concat(data) 
+---------------------------------------------------------------------------------------------------------------------------------   
+Q10. How do you merge two Pandas DataFrames on a specific column?
+Ans:-Pandas DataFrame merge() function is used to merge two DataFrame 
+---------------------------------------------------------------------------------------------------------------------------------  
+Q11. How do you group data in a Pandas DataFrame by a specific column and apply an aggregation function?
+Ans:- df.groupby(['Name']).sum() 
+---------------------------------------------------------------------------------------------------------------------------------
+Q12. How do you pivot a Pandas DataFrame?
+Ans:-DataFrame.pivot(*, index=None, columns=None, values=None)
+---------------------------------------------------------------------------------------------------------------------------------   
+Q13. How do you change the data type of a column in a Pandas DataFrame?
+Ans:-USE pandas.DataFrame.astype() TO CHANGE THE DATA TYPE OF SELECT COLUMNS
+---------------------------------------------------------------------------------------------------------------------------------   
+Q14. How do you sort a Pandas DataFrame by a specific column?
+Ans:- df.sort_values()  
+---------------------------------------------------------------------------------------------------------------------------------
+Q15. How do you create a copy of a Pandas DataFrame?
+Ans:-DataFrame.copy(deep=True)
+-----------------------------------------------------------------------------------------------------------------------------------    
+Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
+Most of the time we would need to filter the rows based on multiple conditions applying on multiple columns, you can do that in
+ Pandas as below. Note that the parentheses are needed for each condition expression due to Python’s operator precedence rules.
+  & operator binds more tightly than <= and >=. not using parenthesis will have unexpected result
+
+df2=df.loc[(df['Discount'] >= 1200) & (df['Fee'] >= 23000 )]
+print(df2)
+-----------------------------------------------------------------------------------------------------------------------------------------------   
+Q17. How do you calculate the mean of a column in a Pandas DataFrame?
+ 
+DataFrame.mean(axis=_NoDefault.no_default, skipna=True, level=None, numeric_only=None, **kwargs)
+Return the mean of the values over the requested axis.
+----------------------------------------------------------------------------------------------------------------------------------
+Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
+
+Ans:- The Pandas std() is defined as a function for calculating the standard deviation of the given set of numbers, DataFrame, column, and rows
+Series.std(axis=None, skipna=None, level=None, ddof=1, numeric_only=None, **kwargs)  
+---------------------------------------------------------------------------------------------------------------------------------------
+Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
+Ans:- You can use the pandas corr() function to get the correlation between columns of a dataframe. The following is the syntax:
+
+# correlation between Col1 and Col2
+df['Col1'].corr(df['Col2'])
+=-----------------------------------------------------------------------------------------------------------------------------------  
+Q20. How do you select specific columns in a DataFrame using their labels?
+Ans:- To select a specific column, use square brackets [] with the column name of the column of interest.
+ #select 'E' and 'F' rows and 'team' and 'assists' columns
+df.loc[['E', 'F'], ['team', 'assists']]
+----------------------------------------------------------------------------------------------------------------------------   
+Q21. How do you select specific rows in a DataFrame using their indexes?
+Ans:- 	df.loc[row_indexer] 
+-----------------------------------------------------------------------------------------------------------------------------
+Q22. How do you sort a DataFrame by a specific column?
+Ans:-  DataFrame.sort_values()
+----------------------------------------------------------------------------------------------------------------------------- 
+Q23. How do you create a new column in a DataFrame based on the values of another column?
+
+Ans:-You can create a new column based on values from other columns in Pandas using the other columns using 
+df['New Column'] = df['Old column1'] * df['Old column 2'].
+----------------------------------------------------------------------------------------------------------------------------------  
+Q24. How do you remove duplicates from a DataFrame?
+
+Ans:- DataFrame.drop_duplicates(subset=None, *, keep='first', inplace=False, ignore_index=False)
+Return DataFrame with duplicate rows removed. 
+----------------------------------------------------------------------------------------------------------------------------------- 
+Q25. What is the difference between .loc and .iloc in Pandas?
+
+loc[] is used to select rows and columns by Names/Labels
+iloc[] is used to select rows and columns by Integer Index/Position. zero based index position.
