@@ -123,8 +123,13 @@ the try block has terminated normally or after the try block has terminated for 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q19. What happens if you don't do something extra to treat an exception?
 Ans:-The programm will get an error and furthrt not proceed until thr error is resolved.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q20. What are your options for recovering from an exception in your script?
-Ans:-
+Ans:-There are several options for recovering from an exception in a script: Try-except blocks: One common way to handle exceptions is to use a try-except block. 
+In this approach, you put the code that might throw an exception inside a try block, and you define one or more except blocks to handle different types of exceptions.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q21. Describe two methods for triggering exceptions in your script.
 Ans:-In Python, exceptions can be handled by two new methods:
 
